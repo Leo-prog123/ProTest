@@ -49,13 +49,38 @@
 </nav>
 <hr class="border border-danger border-2 opacity-50">
 <h1>тест</h1>
-
-<div class="card text-bg-dark mb-3" style="width: 18rem;">
-    <img src="/static/ra.png" class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">Любой тест</h5>
-        <p class="card-text">Краткое описане теста.</p>
-        <a href="#"  class="btn btn-primary">Перейти куда-нибудь</a>
+<div class="container overflow-hidden text-center">
+    <div class="row gx-5">
+        <div class="col">
+            <div class="card text-bg-dark mb-3" style="width: 18rem;">
+                <img src="/static/ra.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Любой тест</h5>
+                    <p class="card-text">Краткое описане теста.</p>
+                    <a href="#" class="btn btn-primary">Перейти куда-нибудь</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-bg-dark mb-3" style="width: 18rem;">
+                <img src="/static/ra.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Любой тест</h5>
+                    <p class="card-text">Краткое описане теста.</p>
+                    <a href="/obroz.html" class="btn btn-primary">Obroz</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-bg-dark mb-3" style="width: 18rem;">
+                <img src="/static/ra.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Любой тест</h5>
+                    <p class="card-text">Краткое описане теста.</p>
+                    <a href="#" class="btn btn-primary">Перейти куда-нибудь</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 </body>
