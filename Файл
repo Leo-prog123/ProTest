@@ -57,7 +57,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Любой тест</h5>
                     <p class="card-text">Краткое описане теста.</p>
-                    <a href="#" class="btn btn-primary">Перейти куда-нибудь</a>
+                    <a href="/psiho" class="btn btn-primary">psiho</a>
                 </div>
             </div>
         </div>
@@ -67,7 +67,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Любой тест</h5>
                     <p class="card-text">Краткое описане теста.</p>
-                    <a href="/obroz.html" class="btn btn-primary">Obroz</a>
+                    <a href="/obroz" class="btn btn-primary">Obroz</a>
                 </div>
             </div>
         </div>
@@ -77,7 +77,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Любой тест</h5>
                     <p class="card-text">Краткое описане теста.</p>
-                    <a href="#" class="btn btn-primary">Перейти куда-нибудь</a>
+                    <a href="/razvl" class="btn btn-primary">razvl</a>
                 </div>
             </div>
         </div>
