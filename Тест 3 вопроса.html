@@ -1,0 +1,86 @@
+<html>
+<head><title>Тест из нескольких задач по математике</title>
+<style>
+p, span, input {
+ font-size:24px;
+}
+button{
+    font-size:18px;
+}
+#vo {
+    color:green;
+}
+#nvo {
+    color:red;
+}
+#ot {
+    color:blue;
+}
+</style>
+</head>
+<body style="background-color:#FFFAFA;">
+<center>
+    <h1><font color="#708090" size="20">Выполните задания теста:</font></h1>
+<div id="vopros1" style="display:block;">
+<p>Посчитайте</p>
+<p>4*12 + 7 = <input type="text" id="z_1"></p>
+</div>
+<div id="vopros2" style="display:none;">
+<p>Посчитайте</p>
+<p>7-8*2 = <input type="text" id="z_2"></p>
+</div>
+<div id="vopros3" style="display:none;">
+<p>Посчитайте</p>
+<p>34*2 + 17 = <input type="text" id="z_3"></p>
+</div>
+    <button id="kn_sl" onclick="sled_vopr();"><font color = "black" size="5">Следующий вопрос</font></button>
+<button onclick="proverit();"><font color = "red" size="5">Проверить</font></button>
+<div id="rezultat"></div>
+    </center>
+<script>
+function sled_vopr(){
+    if(document.getElementById('vopros2').style.display == "block"){
+        document.getElementById('vopros2').style.display = "none";
+        document.getElementById('vopros3').style.display = "block";
+        document.getElementById('kn_sl').style.display = "none";
+        document.getElementById('kn_pr').style.display = "block";
+    }
+    if(document.getElementById('vopros1').style.display == "block"){
+        document.getElementById('vopros1').style.display = "none";
+        document.getElementById('vopros2').style.display = "block";
+    }
+}
+function proverit(){
+pr_otv_zadachi_1 = 55;
+pr_otv_zadachi_2 = -9;
+pr_otv_zadachi_3 = 85;
+otv_uch_1 = document.getElementById('z_1').value;
+otv_uch_2 = document.getElementById('z_2').value;
+otv_uch_3 = document.getElementById('z_3').value;
+ball = 0;
+if(otv_uch_1 == pr_otv_zadachi_1){
+    ball +=1;
+    otveti = "<span id='vo'>Вопрос 1. Вы ответили верно. Ваш ответ: "+otv_uch_1+"</span>";
+} else {
+    otveti = "<span id='nvo'>Вопрос 1. Вы ответили не верно. Ваш ответ: "+otv_uch_1+"</span>";
+}
+if(otv_uch_2 == pr_otv_zadachi_2){
+    ball +=1;
+    otveti += "<br><span id='vo'>Вопрос 2. Вы ответили верно. Ваш ответ: "+otv_uch_2+"</span>";
+} else {
+    otveti += "<br><span id='nvo'>Вопрос 2. Вы ответили не верно. Ваш ответ: "+otv_uch_2+"</span>";
+}
+if(otv_uch_3 == pr_otv_zadachi_3){
+    ball +=1;
+    otveti += "<br><span id='vo'>Вопрос 3. Вы ответили верно. Ваш ответ: "+otv_uch_3+"</span>";
+} else {
+    otveti += "<br><span id='nvo'>Вопрос 3. Вы ответили не верно. Ваш ответ: "+otv_uch_3+"</span>";
+}
+vsego_zadach = 3;
+procent_vip = ball/vsego_zadach * 100;
+procent_vip = procent_vip.toFixed();
+document.getElementById('rezultat').innerHTML = "<span id='ot'>Задания выполнены верно на "+procent_vip+"%.</span><br><br>"+otveti;
+}
+</script>
+</body>
+</html>
