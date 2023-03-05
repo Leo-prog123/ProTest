@@ -1,7 +1,7 @@
 <html>
 <head><title>Тест из нескольких задач по математике</title>
 <style>
-p, span, input {
+p, span, input, td {
  font-size:24px;
 }
 button{
@@ -16,22 +16,54 @@ button{
 #ot {
     color:blue;
 }
+table.text  {
+    width:  40%; /* Ширина таблицы */
+    border-spacing: 0; /* Расстояние между ячейками */
+   }
+table.text td {
+
+    vertical-align: top; /* Выравнивание по верхнему краю */
+   }
+td.rightcol { /* Правая ячейка */
+    text-align: right; /* Выравнивание по правому краю */
+   }
 </style>
 </head>
 <body style="background-color:#FFFAFA;">
 <center>
     <h1><font color="#708090" size="20">Выполните задания теста:</font></h1>
 <div id="vopros1" style="display:block;">
-<p>Посчитайте</p>
-<p>4*12 + 7 = <input type="text" id="z_1"></p>
+    <font color="black" size="15">Знаменитый физик теоретик</font>
+    <table class="text">
+    <tr>
+        <td class="text">1)Альберт Энштейн</td>
+        <td class="text">2)Исаак Ньютон</td>
+        <td class="text">3)Максвелл Джеймс Клерк</td>
+    </tr>
+    </table>
+<p>Введите цифру правильного ответа <input type="text" id="z_1"></p>
 </div>
 <div id="vopros2" style="display:none;">
-<p>Посчитайте</p>
-<p>7-8*2 = <input type="text" id="z_2"></p>
+<font color="black" size="15">Знаменитый физик теоретик</font>
+    <table class="text">
+    <tr>
+        <td class="text">1)Альберт Энштейн</td>
+        <td class="text">2)Исаак Ньютон</td>
+        <td class="text">3)Максвелл Джеймс Клерк</td>
+    </tr>
+    </table>
+<p>Введите цифру правильного ответа <input type="text" id="z_2"></p>
 </div>
 <div id="vopros3" style="display:none;">
-<p>Посчитайте</p>
-<p>34*2 + 17 = <input type="text" id="z_3"></p>
+<font color="black" size="15">Знаменитый физик теоретик</font>
+    <table class="text">
+    <tr>
+        <td class="text">1)Альберт Энштейн</td>
+        <td class="text">2)Исаак Ньютон</td>
+        <td class="text">3)Максвелл Джеймс Клерк</td>
+    </tr>
+    </table>
+<p>Введите цифру правильного ответа <input type="text" id="z_3"></p>
 </div>
     <button id="kn_sl" onclick="sled_vopr();"><font color = "black" size="5">Следующий вопрос</font></button>
 <button onclick="proverit();"><font color = "red" size="5">Проверить</font></button>
@@ -51,7 +83,7 @@ function sled_vopr(){
     }
 }
 function proverit(){
-pr_otv_zadachi_1 = 55;
+pr_otv_zadachi_1 = 1;
 pr_otv_zadachi_2 = -9;
 pr_otv_zadachi_3 = 85;
 otv_uch_1 = document.getElementById('z_1').value;
