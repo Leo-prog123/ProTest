@@ -1,0 +1,331 @@
+<html>
+<head><title>Тест из нескольких задач по математике</title>
+<style>
+p, span, input, td {
+ font-size:24px;
+ face:"Verdana";
+}
+button{
+    font-size:18px;
+    face:"Verdana";
+}
+#vo {
+    color:green;
+}
+#nvo {
+    color:red;
+}
+#ot {
+    color:blue;
+    face:"Verdana";
+
+}
+table.text  {
+    width:  40%; /* Ширина таблицы */
+    border-spacing: 0; /* Расстояние между ячейками */
+   }
+table.text td {
+
+    vertical-align: top; /* Выравнивание по верхнему краю */
+   }
+td.rightcol { /* Правая ячейка */
+    text-align: right; /* Выравнивание по правому краю */
+   }
+</style>
+</head>
+<body style="background-color:#FFFAFA;">
+<center>
+<h1><font face="Verdana" color="#708090" size="20">Ответьте на вопрос:</font></h1>
+<div id="vopros1" style="display:block;">
+
+    <p><font face="Verdana" color="black" size="8">1.Ваш любимый предмет?</font></p>
+    <table class="text">
+    <tr>
+        <td class="text">1)Русский язык</td>
+        <td class="text">2)Математика</td>
+        <td class="text">3)Биология</td>
+        <td class="text">4)Обществознание</td>
+    </tr>
+    </table>
+    <p><font face="Verdana" color="black" size="5">Введите цифру наиболее подходящего ответа<br><br><input type="text" id="z_1"></font></p>
+</div>
+<div id="vopros2" style="display:none;">
+
+    <p><font face="Verdana" color="black" size="8">2.Выберите еще один любимый предмет?</font></p>
+    <table class="text">
+    <tr>
+        <td class="text">1)Английский язык</td>
+        <td class="text">2)Физика</td>
+        <td class="text">3)Химия</td>
+
+    </tr>
+    </table>
+    <p><font face="Verdana" color="black" size="5">Введите цифру наиболее подходящего ответа<br><br><input type="text" id="z_2"></font></p>
+</div>
+<div id="vopros3" style="display:none;">
+
+    <p><font face="Verdana" color="black" size="8">3.Я предпочту заниматься финансовыми операциями, а не, например, музыкой.</font></p>
+    <p><font face="Verdana" color="black" size="5">Введите "да" или "нет". Если затрудняетесь ответить не вводите ничего.<br><br><input type="text" id="z_3"></font></p>
+</div>
+    <div id="vopros4" style="display:none;">
+
+        <p><font face="Verdana" color="black" size="8">4.Я предпочитаю разумно распределять деньги, а не тратить все сразу.</font></p>
+
+        <p><font face="Verdana" color="black" size="5">Введите "да" или "нет". Если затрудняетесь ответить не вводите ничего.<br><br><input type="text" id="z_4"></font></p>
+</div>
+
+<div id="vopros5" style="display:none;">
+
+    <p><font face="Verdana" color="black" size="8">5.Я с удовольствием смотрю новости политики и экономики.</font></p>
+
+    <p><font face="Verdana" color="black" size="5">Введите "да" или "нет". Если затрудняетесь ответить не вводите ничего.<br><br><input type="text" id="z_5"></font></p>
+</div>
+<div id="vopros6" style="display:none;">
+
+    <p><font face="Verdana" color="black" size="8">6.Какую работу вы предпочтёте?</font></p>
+    <table class="text">
+    <tr>
+        <td class="text">1)Ухаживать за животными</td>
+        <td class="text">2)Обслуживать технически приборы</td>
+    </tr>
+    </table>
+    <p><font face="Verdana" color="black" size="5">Введите цифру наиболее подходящего ответа. Если затрудняетесь ответить не вводите ничего.<br><br><input type="text" id="z_6"></font></p>
+</div>
+    <div id="vopros7" style="display:none;">
+
+        <p><font face="Verdana" color="black" size="8">7.Какую работу вы предпочтёте?</font></p>
+    <table class="text">
+    <tr>
+        <td class="text">1)Следить за качеством книжных иллюстраций плакатов, художественных открыток</td>
+        <td class="text">2)Следить за состоянием, развитием растений</td>
+    </tr>
+    </table>
+        <p><font face="Verdana" color="black" size="5">Введите цифру наиболее подходящего ответа. Если затрудняетесь ответить не вводите ничего.<br><br><input type="text" id="z_7"></font></p>
+</div>
+    <div id="vopros8" style="display:none;">
+
+        <p><font face="Verdana" color="black" size="8">8.Какую работу вы предпочтёте?</font></p>
+    <table class="text">
+    <tr>
+        <td class="text">1)обсуждать научно-популярные книги статьи</td>
+        <td class="text">2)обсуждать художественные книги</td>
+    </tr>
+    </table>
+        <p><font face="Verdana" color="black" size="5">Введите наиболее подходящего ответа. Если затрудняетесь ответить не вводите ничего.<br><br><input type="text" id="z_8"></font></p>
+</div>
+    <div id="vopros9" style="display:none;">
+
+        <p><font face="Verdana" color="black" size="8">9.Какую работу вы предпочтёте?</font></p>
+    <table class="text">
+    <tr>
+        <td class="text">1)художественно оформлять выставки учавстовать в подготовке пьес, концертов</td>
+        <td class="text">2)доводить товар до потребителя(рекламировать, продавать)</td>
+    </tr>
+    </table>
+        <p><font face="Verdana" color="black" size="5">Введите цифру наиболее подходящего ответа. Если затрудняетесь ответить не вводите ничего.<br><br><input type="text" id="z_9"></font></p>
+</div>
+    <div id="vopros10" style="display:none;">
+
+        <p><font face="Verdana" color="black" size="8">10.Какую работу вы предпочтёте?</font></p>
+    <table class="text">
+    <tr>
+        <td class="text">1)Разбирать ссоры споры между людьми убеждать рязъяснять поощрять</td>
+        <td class="text">2)Разбираться в чертежах схемах таблицах</td>
+
+    </tr>
+    </table>
+        <p><font face="Verdana" color="black" size="5">Введите цифру наиболее подходящего ответа. Если затрудняетесь ответить не вводите ничего.<br><br><input type="text" id="z_10"></font></p>
+</div>
+    <div id="vopros11" style="display:none;">
+
+        <p><font face="Verdana" color="black" size="8">11.Какую работу вы предпочтёте?</font></p>
+    <table class="text">
+    <tr>
+        <td class="text">1)Состовлять точные описания(отчеты) о наблюдаемых явлениях, событиях,измеряемых обЪектов.</td>
+        <td class="text">2)Художественно описывать, изображать события наблюдаемые или представляемые</td>
+
+    </tr>
+    </table>
+        <p><font face="Verdana" color="black" size="5">Введите цифру наиболее подходящего ответа. Если затрудняетесь ответить не вводите ничего.<br><br><input type="text" id="z_11"></font></p>
+</div>
+
+
+    <button id="kn_sl" onclick="sled_vopr();"><font color = "black" size="5">Следующий вопрос</font></button>
+
+<button onclick="proverit();"><font color = "red" size="5">Проверить</font></button>
+
+<div id="rezultat"></div>
+    </center>
+<script>
+function sled_vopr(){
+    if(document.getElementById('vopros10').style.display == "block"){
+        document.getElementById('vopros10').style.display = "none";
+        document.getElementById('vopros11').style.display = "block";
+        document.getElementById('kn_sl').style.display = "none";
+        document.getElementById('kn_pr').style.display = "block";
+    }
+
+    if(document.getElementById('vopros9').style.display == "block"){
+        document.getElementById('vopros9').style.display = "none";
+        document.getElementById('vopros10').style.display = "block";
+    }
+    if(document.getElementById('vopros8').style.display == "block"){
+        document.getElementById('vopros8').style.display = "none";
+        document.getElementById('vopros9').style.display = "block";
+    }
+    if(document.getElementById('vopros7').style.display == "block"){
+        document.getElementById('vopros7').style.display = "none";
+        document.getElementById('vopros8').style.display = "block";
+    }
+    if(document.getElementById('vopros6').style.display == "block"){
+        document.getElementById('vopros6').style.display = "none";
+        document.getElementById('vopros7').style.display = "block";
+    }
+    if(document.getElementById('vopros5').style.display == "block"){
+        document.getElementById('vopros5').style.display = "none";
+        document.getElementById('vopros6').style.display = "block";
+    }
+    if(document.getElementById('vopros4').style.display == "block"){
+        document.getElementById('vopros4').style.display = "none";
+        document.getElementById('vopros5').style.display = "block";
+    }
+    if(document.getElementById('vopros3').style.display == "block"){
+        document.getElementById('vopros3').style.display = "none";
+        document.getElementById('vopros4').style.display = "block";
+
+    }
+    if(document.getElementById('vopros2').style.display == "block"){
+        document.getElementById('vopros2').style.display = "none";
+        document.getElementById('vopros3').style.display = "block";
+
+    }
+    if(document.getElementById('vopros1').style.display == "block"){
+        document.getElementById('vopros1').style.display = "none";
+        document.getElementById('vopros2').style.display = "block";
+    }
+}
+function proverit(){
+
+otv_uch_1 = document.getElementById('z_1').value;
+otv_uch_2 = document.getElementById('z_2').value;
+otv_uch_3 = document.getElementById('z_3').value;
+otv_uch_4 = document.getElementById('z_4').value;
+otv_uch_5 = document.getElementById('z_5').value;
+otv_uch_6 = document.getElementById('z_6').value;
+otv_uch_7 = document.getElementById('z_7').value;
+otv_uch_8 = document.getElementById('z_8').value;
+otv_uch_9 = document.getElementById('z_9').value;
+otv_uch_10 = document.getElementById('z_10').value;
+otv_uch_11 = document.getElementById('z_11').value;
+fm = 0;
+gm = 0;
+bh = 0;
+se = 0;
+
+if(otv_uch_1 == 1){
+    gm +=1;
+} else if(otv_uch_1 == 2) {
+    fm +=1;
+    se +=1;
+} else if(otv_uch_1 == 3) {
+    bh +=1;
+} else if(otv_uch_1 == 4) {
+    se+=1;
+}
+
+if(otv_uch_2 == 1){
+    gm += 1;
+} else if(otv_uch_2 == 2) {
+    fm +=1;
+} else if(otv_uch_2 == 3) {
+    bh +=1;
+}
+
+if(otv_uch_3 == "да"){
+    se +=2;
+    fm +=1;
+} else if(otv_uch_3 == "нет") {
+    gm += 1;
+    se -= 1;
+}
+
+if(otv_uch_4 == "да"){
+    se +=2;
+    fm +=1;
+} else if(otv_uch_4 == "нет") {
+    se -= 1;
+}
+
+if(otv_uch_5 == "да"){
+    se +=2;
+} else if(otv_uch_5 == "нет") {
+    se -= 1;
+}
+
+if(otv_uch_6== 1){
+    bh +=2;
+} else if(otv_uch_6 == 2) {
+    fm +=2;
+}
+
+if(otv_uch_7== 1){
+    gm +=2;
+} else if(otv_uch_7 == 2) {
+    bh +=2;
+}
+
+if(otv_uch_8== 1){
+    bh +=1;
+    fm +=1;
+    se +=2;
+} else if(otv_uch_8 == 2) {
+    gm +=2;
+}
+
+if(otv_uch_9== 1){
+    gm +=2;
+} else if(otv_uch_9 == 2) {
+    se +=2;
+}
+
+if(otv_uch_10== 1){
+    gm +=2;
+    se+=2;
+} else if(otv_uch_10 == 2) {
+    fm +=2;
+    bh +=1;
+}
+
+if(otv_uch_11== 1){
+    bh +=2;
+    se+=1;
+    fm+=1;
+} else if(otv_uch_11 == 2) {
+    gm+=2;
+}
+
+
+if(Math.max(bh,gm,fm,se)==0){
+    n="Вы не ответили ни на одн из вопросов";
+} else if(Math.max(bh,gm,fm,se)==bh){
+    n="Наиболее подходящее вам направление - био-химическое";
+    s="<span>Перечень медицинских специальностей не ограничивается профессиями врачей и среднего медперсонала. В число медработников входят сотрудники лабораторий и НИИ, занимающиеся изучением биоматериала и биохимических показателей клеточной работы в норме и при патологиях. В список компетенций входят знания по естественным и медицинским наукам и биотехнологическим дисциплинам</span>";
+} else if(Math.max(bh,gm,fm,se)==gm){
+    n="Наиболее подходящее вам направление - гуманитарное";
+    s = "<span>Гуманитариям подходят направления обучения, связанные с лингвистикой, филологией, философией, маркетингом, педагогикой, неэкономическим менеджментом, индустрией HoReCa, арт-бизнесом и творческие специальности. Данные образовательные программы включают изучение социологии, психологии, культурологии, философии, истории, литературы, писательского дела и иностранного языка.</span>";
+} else if(Math.max(bh,gm,fm,se)==fm){
+    n="Наиболее подходящее вам направление - физико-математическое";
+    s = "<span>Абитуриентам с аналитическим талантом и способностями в области математических направлений подойдут технические и экономические специальности, связанные с проведением расчетов, вычислений, построением трендов и тенденций, конструированием и проектной деятельностью.</span>";
+} else if(Math.max(bh,gm,fm,se)==se){
+    n="Наиболее подходящее вам направление - социально-экономическое";
+    s = "<span>Социально-экономическое направление объединяет специальности, затрагивающие социальную сферу и финансово-экономический сектор. К данному профилю относятся различные профессии, подразумевающие обработку информации, реализацию управленческих функций, занятость в банковских организациях. Специальности предполагают глубокие знания математики, английского языка, обществознания. </span>";
+}
+
+
+
+
+document.getElementById('rezultat').innerHTML = "<span id='ot'>"+n+".</span><br><br>"+s;
+}
+</script>
+</body>
+</html>
