@@ -1,0 +1,272 @@
+<html>
+<head><title>Тест из нескольких задач по математике</title>
+<style>
+p, span, input, td {
+ font-size:24px;
+ face:"Verdana";
+}
+button{
+    font-size:18px;
+    face:"Verdana";
+}
+#vo {
+    color:green;
+}
+#nvo {
+    color:red;
+}
+#ot {
+    color:blue;
+    face:"Verdana";
+
+}
+table.text  {
+    width:  40%; /* Ширина таблицы */
+    border-spacing: 0; /* Расстояние между ячейками */
+   }
+table.text td {
+
+    vertical-align: top; /* Выравнивание по верхнему краю */
+   }
+td.rightcol { /* Правая ячейка */
+    text-align: right; /* Выравнивание по правому краю */
+   }
+</style>
+</head>
+<body style="background-color:#FFFAFA;">
+<center>
+<h1><font face="Verdana" color="#708090" size="20">Ответьте на вопрос:</font></h1>
+<div id="vopros1" style="display:block;">
+
+    <p><font face="Verdana" color="black" size="8">1.Вы часто уходите в себя?</font></p>
+
+    <p><font face="Verdana" color="black" size="5">Введите "да" или "нет". Если затрудняетесь ответить не вводите ничего.<br><br><input type="text" id="z_1"></font></p>
+</div>
+<div id="vopros2" style="display:none;">
+
+    <p><font face="Verdana" color="black" size="8">2.Вы затрудняетесь установить новый контакт с людьми?</font></p>
+
+    <p><font face="Verdana" color="black" size="5">Введите "да" или "нет". Если затрудняетесь ответить не вводите ничего.<br><br><input type="text" id="z_2"></font></p>
+</div>
+<div id="vopros3" style="display:none;">
+
+    <p><font face="Verdana" color="black" size="8">3.Вы сдержаны и терпеливы?</font></p>
+    <p><font face="Verdana" color="black" size="5">Введите "да" или "нет". Если затрудняетесь ответить не вводите ничего.<br><br><input type="text" id="z_3"></font></p>
+</div>
+    <div id="vopros4" style="display:none;">
+
+        <p><font face="Verdana" color="black" size="8">4.Вы часто принимаете поспешные решения?</font></p>
+
+        <p><font face="Verdana" color="black" size="5">Введите "да" или "нет". Если затрудняетесь ответить не вводите ничего.<br><br><input type="text" id="z_4"></font></p>
+</div>
+
+<div id="vopros5" style="display:none;">
+
+    <p><font face="Verdana" color="black" size="8">5.Вы очень обидчивы?</font></p>
+
+    <p><font face="Verdana" color="black" size="5">Введите "да" или "нет". Если затрудняетесь ответить не вводите ничего.<br><br><input type="text" id="z_5"></font></p>
+</div>
+<div id="vopros6" style="display:none;">
+
+    <p><font face="Verdana" color="black" size="8">6.Вы всегда обладаете бодрым настроением?</font></p>
+
+    <p><font face="Verdana" color="black" size="5">Введите "да" или "нет". Если затрудняетесь ответить не вводите ничего.<br><br><input type="text" id="z_6"></font></p>
+</div>
+    <div id="vopros7" style="display:none;">
+
+        <p><font face="Verdana" color="black" size="8">7.Вы решительны и инициативны?</font></p>
+
+        <p><font face="Verdana" color="black" size="5">Введите "да" или "нет". Если затрудняетесь ответить не вводите ничего.<br><br><input type="text" id="z_7"></font></p>
+</div>
+    <div id="vopros8" style="display:none;">
+
+        <p><font face="Verdana" color="black" size="8">8.Вы достаточно вспыльчивы?</font></p>
+
+        <p><font face="Verdana" color="black" size="5">Введите "да" или "нет". Если затрудняетесь ответить не вводите ничего.<br><br><input type="text" id="z_8"></font></p>
+</div>
+    <div id="vopros9" style="display:none;">
+
+        <p><font face="Verdana" color="black" size="8">9.Вы легко переносите одиночество?</font></p>
+
+        <p><font face="Verdana" color="black" size="5">Введите "да" или "нет". Если затрудняетесь ответить не вводите ничего.<br><br><input type="text" id="z_9"></font></p>
+</div>
+    <div id="vopros10" style="display:none;">
+
+        <p><font face="Verdana" color="black" size="8">10.Вы резки и прямолинейны в отношениях с людьми?</font></p>
+
+        <p><font face="Verdana" color="black" size="5">Введите "да" или "нет". Если затрудняетесь ответить не вводите ничего.<br><br><input type="text" id="z_10"></font></p>
+</div>
+
+
+
+    <button id="kn_sl" onclick="sled_vopr();"><font color = "black" size="5">Следующий вопрос</font></button>
+
+<button onclick="proverit();"><font color = "red" size="5">Проверить</font></button>
+
+<div id="rezultat"></div>
+    </center>
+<script>
+function sled_vopr(){
+
+    if(document.getElementById('vopros9').style.display == "block"){
+        document.getElementById('vopros9').style.display = "none";
+        document.getElementById('vopros10').style.display = "block";
+        document.getElementById('kn_sl').style.display = "none";
+        document.getElementById('kn_pr').style.display = "block";
+    }
+    if(document.getElementById('vopros8').style.display == "block"){
+        document.getElementById('vopros8').style.display = "none";
+        document.getElementById('vopros9').style.display = "block";
+    }
+    if(document.getElementById('vopros7').style.display == "block"){
+        document.getElementById('vopros7').style.display = "none";
+        document.getElementById('vopros8').style.display = "block";
+    }
+    if(document.getElementById('vopros6').style.display == "block"){
+        document.getElementById('vopros6').style.display = "none";
+        document.getElementById('vopros7').style.display = "block";
+    }
+    if(document.getElementById('vopros5').style.display == "block"){
+        document.getElementById('vopros5').style.display = "none";
+        document.getElementById('vopros6').style.display = "block";
+    }
+    if(document.getElementById('vopros4').style.display == "block"){
+        document.getElementById('vopros4').style.display = "none";
+        document.getElementById('vopros5').style.display = "block";
+    }
+    if(document.getElementById('vopros3').style.display == "block"){
+        document.getElementById('vopros3').style.display = "none";
+        document.getElementById('vopros4').style.display = "block";
+
+    }
+    if(document.getElementById('vopros2').style.display == "block"){
+        document.getElementById('vopros2').style.display = "none";
+        document.getElementById('vopros3').style.display = "block";
+
+    }
+    if(document.getElementById('vopros1').style.display == "block"){
+        document.getElementById('vopros1').style.display = "none";
+        document.getElementById('vopros2').style.display = "block";
+    }
+}
+function proverit(){
+
+otv_uch_1 = document.getElementById('z_1').value;
+otv_uch_2 = document.getElementById('z_2').value;
+otv_uch_3 = document.getElementById('z_3').value;
+otv_uch_4 = document.getElementById('z_4').value;
+otv_uch_5 = document.getElementById('z_5').value;
+otv_uch_6 = document.getElementById('z_6').value;
+otv_uch_7 = document.getElementById('z_7').value;
+otv_uch_8 = document.getElementById('z_8').value;
+otv_uch_9 = document.getElementById('z_9').value;
+otv_uch_10 = document.getElementById('z_10').value;
+
+hal = 0;
+san = 0;
+mel = 0;
+fleg = 0;
+
+if(otv_uch_1 == "да"){
+    hal +=1;
+    mel +=2;
+} else if(otv_uch_1 == "нет") {
+    fleg +=1;
+    san +=1;
+}
+
+if(otv_uch_2 == "да"){
+    fleg+=1;
+    mel+=1;
+} else if(otv_uch_2 == "нет") {
+    san +=1;
+    hal +=1;
+}
+
+if(otv_uch_3 == "да"){
+    fleg += 1;
+    san += 1;
+} else if(otv_uch_3 == "нет") {
+    hal += 1;
+    mel += 1;
+}
+
+if(otv_uch_4 == "да"){
+    hal += 2;
+    mel += 1;
+} else if(otv_uch_4 == "нет") {
+    fleg += 2;
+    san += 1;
+}
+
+if(otv_uch_5 == "да"){
+    hal += 1;
+    mel += 2;
+} else if(otv_uch_5 == "нет") {
+    fleg += 1;
+    san += 1;
+}
+if(otv_uch_6 == "да"){
+    hal += 2;
+    san += 2;
+} else if(otv_uch_6 == "нет") {
+    fleg += 2;
+    mel += 2;
+}
+if(otv_uch_7 == "да"){
+    hal += 2;
+    san += 1;
+} else if(otv_uch_7 == "нет") {
+    fleg += 2;
+    mel += 2;
+}
+if(otv_uch_8 == "да"){
+    hal += 1;
+    mel += 1;
+} else if(otv_uch_8 == "нет") {
+    fleg += 1;
+    san += 1;
+}
+if(otv_uch_9 == "да"){
+    fleg += 1;
+    mel += 2;
+} else if(otv_uch_9 == "нет") {
+    hal += 1;
+    san += 1;
+}
+if(otv_uch_10 == "да"){
+    fleg += 1;
+    mel += 1;
+} else if(otv_uch_10 == "нет") {
+    hal += 1;
+    san += 1;
+}
+
+
+
+
+
+if(Math.max(hal,mel,san,fleg)==0){
+    n="Вы не ответили ни на одн из вопросов";
+} else if(Math.max(hal,mel,san,fleg)==hal){
+    n="Вы - холерик";
+    s="<span>Холерик — это субъект, обладающий одним из четырёх основных типов темперамента, характеризующийся высоким уровнем психической активности, энергичностью действий, резкостью, стремительностью, силой движений, их быстрым темпом, порывистостью. Холерик вспыльчив, нетерпелив, подвержен эмоциональным срывам, часто бывает агрессивным.  При отсутствии надлежащего воспитания недостаточная эмоциональная уравновешенность может привести к неспособности контролировать свои эмоции в трудных жизненных обстоятельствах.</span>";
+} else if(Math.max(hal,mel,san,fleg)==mel){
+    n="Вы - меланхолик";
+    s = "<span>Меланхолик —  легкоранимый, склонный глубоко переживать даже незначительные трудности и неудачи, но внешне вяло реагирующий на окружающее. Меланхолики отличаются высокой сенситивностью и эмоциональной чувствительностью, как следствие возникает легкоранимость. В некоторых сферах деятельности это является желательной личностной чертой, так как высокая эмоциональная чувствительность людей с меланхолическим темпераментом позволяет улавливать тончайшие эмоциональные выражения окружающих, особенно утончённых личностей. Для меланхоликов также характерно преобладание подавленного настроения и слабость волевой деятельности, проявляющаяся, например, в неуверенности в себе и нерешительности. Как правило, меланхолики считаются интровертами, поскольку их фокус внимания заточен на внутренние переживания.</span>";
+} else if(Math.max(hal,mel,san,fleg)==san){
+    n="Вы - сангвиник";
+    s = "<span>Сангвиник — это личность, характеризующаяся высокой психической активностью, энергичностью, работоспособностью, быстротой и живостью движений, разнообразием и богатством мимики, быстрым темпом речи. Сангвиник стремится к частой смене впечатлений, легко и быстро отзывается на окружающие события, общителен. Эмоции у сангвиника преимущественно положительные, они быстро возникают и быстро сменяются. Он быстро приспосабливается к новым условиям и быстро сходится с людьми. Его чувства легко возникают и сменяются новыми, ему свойственна выразительность, но иногда и непостоянство.</span>";
+} else if(Math.max(hal,mel,san,fleg)==fleg){
+    n="Вы - флегматик";
+    s = "<span>Флегматик —  медлительного, спокойного, с устойчивыми стремлениями и более или менее постоянным настроением, со слабым внешним выражением душевных состояний. Флегматик отличается сильным, уравновешенным, инертным типом нервной системы. Такие люди имеют надёжную память и склонны принимать продуманные, взвешенные и нерискованные решения.</span>";
+}
+
+
+
+
+document.getElementById('rezultat').innerHTML = "<br><span id='ot'>"+n+".</span><br><br>"+s;
+}
+</script>
+</body>
+</html>
